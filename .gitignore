@@ -1,0 +1,7 @@
+.classpath
+.project
+.externalToolBuilders/*
+.settings/*
+bin/*
+src/server-root/*
+target/*

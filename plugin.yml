@@ -1,0 +1,18 @@
+main: me.readme.DashCraft.Main
+name: DashCraft
+version: 1.0
+author: readme
+api-version: 1.13
+depend:
+- WorldEdit
+soft-depend:
+- FAWE
+commands:
+  dash:
+    description: Save MineCraft Schematics as Non-Fungible-Token (NFT) on the Dash Blockchain (Evonet). First "/dash login <dash-username>". Then execute "//wand" and receive your selection pick-axe. Select a region by Left-Clicking two blocks. Then type "//copy". Finally type "/dash save <name> <title>"
+    permission: creative.dash 
+    usage: /<command> [login <dash user>|logout|save <schematic-name> <title>]
+permissions:
+  creative.dash:
+    description: Allows dash command
+    default: op
