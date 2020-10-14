@@ -18,7 +18,7 @@ public class CreativeListener implements Listener {
 		// clear clipboard so /copy command needs to be executed
 //		Bukkit.getServer().dispatchCommand(event.getPlayer(), "/schem clear");
 		event.getPlayer().performCommand("/schem clear");	// clear clipboard
-		event.setJoinMessage(ChatColor.YELLOW + "Type \"t\" to open Chat and then type \"/plot auto\" to claim a plot for building : ).");
+		event.setJoinMessage(ChatColor.YELLOW + "Type \"t\" to open Chat and then Enter \"/plot auto\" to claim a plot for building : ).\n Enter \"/dash\" to view usage for non-fungible-token creation!" );
 	}
 
 	@EventHandler

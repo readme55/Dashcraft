@@ -9,7 +9,7 @@ soft-depend:
 - FAWE
 commands:
   dash:
-    description: Save MineCraft Schematics as Non-Fungible-Token (NFT) on the Dash Blockchain (Evonet). First "/dash login <dash-username>". Then execute "//wand" and receive your selection pick-axe. Select a region by Left-Clicking two blocks. Then type "//copy". Finally type "/dash save <name> <title>"
+    description: Save MineCraft Schematics as Non-Fungible-Token (NFT) on the Dash Blockchain (Evonet). First "/dash login <dash-username>". Then execute "//wand" and receive your selection pick-axe. Select a region by left- and right- clicking two blocks. Then type "//copy". Finally type "/dash save <name> <title>"
     permission: creative.dash 
     usage: /<command> [login <dash user>|logout|save <schematic-name> <title>]
 permissions:

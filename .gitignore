@@ -4,3 +4,4 @@
 .settings/*
 bin/*
 src/server-root/*
+target/*

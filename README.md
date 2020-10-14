@@ -12,6 +12,7 @@ This plugin will allow selecting and exporting the in-game build structures to D
 
 ## Installation
 - Download .jar plugin and place into Spigot Server Plugin directory
+- Add Permission creative.dash
 - Start server
 
 ## Usage

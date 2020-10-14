@@ -58,7 +58,7 @@ public class CreativeCommand implements CommandExecutor {
 
 			String absPath = new File("").getAbsolutePath();
 			// System.out.println(absPath);
-			String relConfigPath = "/plugins/DashCraftPlugin/config.yml";
+			String relConfigPath = "/plugins/DashCraft/config.yml";
 			Boolean useFAWE = config.getBoolean("useFAWE");
 
 			// LOGIN command
@@ -69,7 +69,7 @@ public class CreativeCommand implements CommandExecutor {
 				// dash
 //				player.sendMessage(ChatColor.RED + "Usage: /dash {login/logout/tip/save");
 //				player.sendMessage(ChatColor.YELLOW + "Usage: /dash < login | logout | tip | save >");
-				player.sendMessage(ChatColor.YELLOW + "Usage: /dash login <username> | logout | save <filename> <title>");
+				player.sendMessage(ChatColor.YELLOW + "Usage: /dash login <username> | logout | save <schematic-name> <title>");
 				return true;
 			}
 
@@ -263,7 +263,7 @@ public class CreativeCommand implements CommandExecutor {
 								//////////// USE JS-NODE until DAPI JAVA-Bindings /////////////
 
 								// create/overwrite and write to filename.txt
-								String relUserTmpPath = "/plugins/DashCraftPlugin/" + playerName + ".txt";
+								String relUserTmpPath = "/plugins/DashCraft/" + playerName + ".txt";
 								String filepath = absPath + relUserTmpPath;
 								File myObj1 = new File(filepath);
 								if (myObj1.createNewFile()) {
@@ -309,7 +309,7 @@ public class CreativeCommand implements CommandExecutor {
 
 								//////////////////////////////////////////////////////////////////////////
 								if (!error) {
-									player.sendMessage(ChatColor.GREEN + "Schematic Save Request successfully send!");
+									player.sendMessage(ChatColor.GREEN + "Success creating Non-Fungible-Token from schematic. Confirm Request inside your Dash-Wallet!");
 								} else {
 									player.sendMessage(ChatColor.AQUA + "Error occured sending Request to Wallet.");
 								}
