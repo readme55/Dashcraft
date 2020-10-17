@@ -21,4 +21,5 @@ This plugin will allow selecting and exporting the in-game build structures to D
 - Enter `//wand` to receive selection tool (wooden pickaxe)
 - Mark your structure inside a rectangle by selecting two outer coordinates, the first one with left and the second one with right mouse button
 - Enter `//copy` 
+- Enter `/dash login <dash-username>` eg. `/dash login readme` (WIP, will send request to wallet)
 - Enter `/dash save <name> <title>` eg. `/dash save myNFT my nft title`
