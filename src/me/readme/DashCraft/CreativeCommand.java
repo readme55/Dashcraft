@@ -244,7 +244,7 @@ public class CreativeCommand implements CommandExecutor {
 								msgObject.put("status", "0");
 								msgObject.put("timestamp", Long.toString(Clock.systemUTC().millis()));
 								// mynfa contract id
-								msgObject.put("STcontract", "E6ZvBNdSYKAocu2v3es88QZdEBGRe9edEovebfUhwGSb"); 
+								msgObject.put("STcontract", "Faggf8rA3GuoEoSo8ACaqtY72iok6DY5D77dr2B7vFw1"); 
 								msgObject.put("STdocument", "mynfa");
 								// msgObject.put("STcontent", nfaObject.toJSONString()); // TODO: fix, build one after an other
 								String strNfaObject = "{ \"date\" : \"" + nfaObject.get("date") + "\",\"timestamp\":\""
