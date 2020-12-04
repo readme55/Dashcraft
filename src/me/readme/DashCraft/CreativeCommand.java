@@ -198,14 +198,14 @@ public class CreativeCommand implements CommandExecutor {
 									System.out.println("Sleep another 2sec");
 									System.out.println("Object written: " + myObj.exists());
 								}
-
+								
 								// String actual = Files.readString(pathFilename, Charset.forName("UTF-8"));
 								// working with FAWE saved file, try which works on different platform!
 								String actual = Files.readString(pathFilename, Charset.forName("ISO-8859-1")); 
 
 								// String actual = Files.readString(pathFilename, Charset.forName("US-ASCII"));
 								// String actual = Files.readString(pathFilename);
-								System.out.println(actual);
+								// System.out.println(actual);	
 
 								// String actual2 = new String(actual.getBytes(), StandardCharsets.US_ASCII);
 								// System.out.println(actual2);
@@ -217,7 +217,7 @@ public class CreativeCommand implements CommandExecutor {
 								String encodedString = Base64.getEncoder()
 										.encodeToString(actual.getBytes(StandardCharsets.ISO_8859_1));
 								// all good, compared with NPP "base 64 with padding" and equal
-								System.out.println("Result Encoded String: " + encodedString); 
+								// System.out.println("Result Encoded String: " + encodedString); 
 
 								////////////////////////////////////////////////////////////////////////////
 								// send schem as document - save as JSON and call node as temporary solution
@@ -234,8 +234,8 @@ public class CreativeCommand implements CommandExecutor {
 								nfaObject.put("schematic_hash", encode_sha256base64(encodedString));
 								nfaObject.put("version", "Sponge");
 								System.out.println("Json string: " + nfaObject.toJSONString());
-								System.out.println("toString: " + nfaObject.toString());
-								System.out.println("normal: " + nfaObject.get("schematic"));
+//								System.out.println("toString: " + nfaObject.toString());
+//								System.out.println("normal: " + nfaObject.get("schematic"));
 
 								JSONObject msgObject = new JSONObject();
 								msgObject.put("header", "Request Document ST");
@@ -275,9 +275,10 @@ public class CreativeCommand implements CommandExecutor {
 								myWriter.write(msgObject.toJSONString());
 								myWriter.close();
 								System.out.println("Successfully wrote to the file " + filepath);
-
+								
+								player.sendMessage(ChatColor.GREEN + "Created Non-Fungible-Token from your build Structure. Sending to Wallet now, please wait.");
 								////////////////////////////////////////////////////////////////////////////
-
+								
 								// execute system command
 								String s = null;
 								String osname = System.getProperty("os.name");
@@ -309,7 +310,7 @@ public class CreativeCommand implements CommandExecutor {
 
 								//////////////////////////////////////////////////////////////////////////
 								if (!error) {
-									player.sendMessage(ChatColor.GREEN + "Success creating Non-Fungible-Token from schematic. Confirm Request inside your Dash-Wallet!");
+									player.sendMessage(ChatColor.GREEN + "Success sending Request to Wallet. Confirm inside your Dash-Wallet!");
 								} else {
 									player.sendMessage(ChatColor.AQUA + "Error occured sending Request to Wallet.");
 								}
