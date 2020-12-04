@@ -1,0 +1,62 @@
+    {
+      mynfa: {
+        indices: [
+          {
+            "properties": [{ "timestamp": "asc" }], "unique": false
+          },
+          {
+            "properties": [{ "schematic_hash": "asc" }], "unique": true
+          },
+          {
+            "properties": [{ "username": "asc" }], "unique": false
+          },
+          {
+            "properties": [{ "game_username": "asc" }], "unique": false
+          },
+          {
+            "properties": [{ "game_uuid": "asc" }], "unique": false
+          },
+        ],
+        properties: {
+          date: {
+            type: "string"
+          },
+          timestamp: {
+            type: "string",
+            "maxLength": 1000
+          },
+          username: {
+            type: "string",
+            "maxLength": 30
+          },
+          game_username: {
+            type: "string",
+            "maxLength": 50
+          },
+          game_uuid: {
+            type: "string",
+            "maxLength": 100
+          },
+          title: {
+            type: "string"
+          },
+          description: {
+            type: "string"
+          },
+          schematic: {
+            type: "string"
+          },
+          schematic_hash: {
+            type: "string",
+            maxLength: 1000
+          },
+          version: {
+            type: "string"
+          },
+          misc: {
+            type: "string"
+          },
+        },
+        additionalProperties: false
+      }
+    };
