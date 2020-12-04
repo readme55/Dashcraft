@@ -6,13 +6,14 @@ This Minecraft Server-Plugin stores v1.13+ (SPONGE) structures as NFT's on Dash 
 This plugin will allow selecting and exporting the in-game build structures to Dash Platform and viewing them online on a MineCraft-Explorer website.
 
 ## Usage
+- Install [Dash Chrome Wallet](https://github.com/readme55/Dash-Chrome-Wallet). Register identity and username. Then activate `Simple Dapp Signing` switch.
 - Build your structure
 - Type `t` to open chat
 - Enter `//wand` to receive selection tool (wooden pickaxe)
 - Mark your structure inside a rectangle by selecting two outer coordinates, the first one with left and the second one with right mouse button
 - Enter `//copy` 
-- Enter `/dash login <dash-username>` eg. `/dash login readme` (WIP, will send request to wallet)
-- Enter `/dash save <name> <title>` eg. `/dash save myNFT my nft title`
+- Enter `/dash login <dash-username>` eg. `/dash login readme`
+- Enter `/dash save <name> <title>` eg. `/dash save myNFT My NFT Example`
 
 ## Requirements
 - Spigot / SpigotPaper Server (https://getbukkit.org/)
