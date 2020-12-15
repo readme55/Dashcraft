@@ -83,24 +83,63 @@ public class CreativeCommand implements CommandExecutor {
 
 				if (numArgs == 2) {
 
-					// TODO: do some CW/dashevo login request - response
-					if (true) {
-						// if entry for player already exists
-						if (config.isSet(playerName)) {
-							config.set(playerLogin, true);
-							config.set(playerDashUser, args[1]);
-						} else {
-							config.addDefault(playerDashUser, args[1]);
-							config.addDefault(playerLogin, true);
+					// run dapp authentication request
+					String username = args[1];
+
+					// execute system command
+					String s = null;
+					String osname = System.getProperty("os.name");
+					System.out.println("osname: " + osname);
+					Process p = null;
+					try {
+						if (osname.startsWith("Windows"))
+							p = Runtime.getRuntime().exec("cmd /c node sendLoginAuth-DSmsg.js " + username); // Windows
+						else
+							p = Runtime.getRuntime().exec("node sendLoginAuth-DSmsg.js " + username); // Linux
+
+						BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
+
+						BufferedReader stdError = new BufferedReader(new InputStreamReader(p.getErrorStream()));
+
+						// read the output from the command
+						System.out.println("Here is the standard output of the command:\n");
+						while ((s = stdInput.readLine()) != null) {
+							System.out.println(s);
 						}
 
-						try {
-							config.save(configFile);
-						} catch (IOException e) {
-							e.printStackTrace();
+						// read any errors from the attempted command
+						System.out.println("Here is the standard error of the command (if any):\n");
+
+						boolean error = false;
+						while ((s = stdError.readLine()) != null) {
+							System.out.println(s);
+							error = true;
 						}
-						player.sendMessage(ChatColor.GREEN + "Successfully logged into Dash Platform as " + args[1]);
-						return true;
+						
+						System.out.println("Exit value: " + p.exitValue());
+						
+						//if (!error) {
+						// login authentication returned exit code 0 (success)
+						if (p.exitValue() == 0) {
+							// if entry for player already exists
+							if (config.isSet(playerName)) {
+								config.set(playerLogin, true);
+								config.set(playerDashUser, username);
+							} else {
+								config.addDefault(playerDashUser, username);
+								config.addDefault(playerLogin, true);
+							}
+
+							config.save(configFile);
+							
+							player.sendMessage(ChatColor.GREEN + "Successfully logged into Dash Platform as " + username);
+							return true;
+						} else {
+							player.sendMessage(ChatColor.AQUA + "Error occured during Login Authentication for user " + username);
+							return false;
+						}
+					} catch (IOException e1) {
+						e1.printStackTrace();
 					}
 				} else {
 					player.sendMessage(ChatColor.AQUA + "You are not logged in!");
@@ -141,6 +180,15 @@ public class CreativeCommand implements CommandExecutor {
 
 			// SAVE command
 			else if (args[0].equalsIgnoreCase("save") && config.getBoolean(playerLogin)) {
+				
+				// check if user logged in
+				if (config.getBoolean(playerLogin)) {
+					player.sendMessage(ChatColor.GREEN + "Using your Dash Platform Username: "
+							+ config.getString(playerDashUser)); //
+				} else {
+					player.sendMessage(ChatColor.AQUA + "You are not logged in with your Dash Username. Run /dash login <username>");
+					return false;
+				}
 
 				if (numArgs >= 3) {
 

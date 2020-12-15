@@ -4,3 +4,5 @@
 .settings/*
 bin/*
 target/*
+src/server-root/node_modules/*
+src/server-root/package-lock.json
