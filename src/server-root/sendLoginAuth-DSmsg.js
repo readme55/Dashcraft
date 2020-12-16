@@ -100,7 +100,8 @@ const dappLoginAuthRequest = async function () {
                 client.disconnect();
             }
         };
-        await submitAuthRequest();
+        // await submitAuthRequest();
+        submitAuthRequest();
 
 
         console.log("start polling for Authentication Response")
