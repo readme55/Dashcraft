@@ -371,7 +371,7 @@ public class CreativeCommand implements CommandExecutor {
 								if (!error) {
 									player.sendMessage(ChatColor.GREEN + "Success sending Request to Wallet. Confirm inside your Dash-Wallet!");
 								} else {
-									player.sendMessage(ChatColor.AQUA + "Error occured sending Request to Wallet.");
+									player.sendMessage(ChatColor.AQUA + "Unable to Login - Did you confirm the Login Request in Chrome Wallet?");
 								}
 
 							} catch (NoSuchAlgorithmException | InterruptedException | IOException e) {
