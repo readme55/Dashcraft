@@ -1,6 +1,6 @@
 # Dashcraft (WIP)
 
-Minecraft Server-Plugin for storing v1.13+ (Sponge) structures as Non-Fungible-Tokens on Dash Platform. A demonstration for the creation and storage of NFT's in Data-Contracts. Anyone can use the default Minecraft game installation and connect to the Creative Server (**185.141.27.111**) running this plugin. After the structure is build, chat commands can be used to submit the NFT to the blockchain using [Dash Chrome Wallet](https://github.com/readme55/Dash-Chrome-Wallet) and a Dash username account.
+Minecraft Server-Plugin for storing v1.13+ (Sponge) structures as Non-Fungible-Tokens on Dash Platform. A demonstration for the creation and storage of NFT's in Data-Contracts. Anyone can use the default Minecraft game installation and connect to the [Dashcraft Creative Server](https://github.com/readme55/dashcraft-server) **185.141.27.111** running this plugin. After the structure is build, chat commands can be used to submit the NFT to the blockchain using [Dash Chrome Wallet](https://github.com/readme55/Dash-Chrome-Wallet) and a Dash username account.
 This plugin will allow selecting and exporting the in-game build structures to Dash Platform and visualize them online on the [MineCraft-Explorer](http://readme.dashdevs.org/minecraft-explorer/)
 
 <p align="center">
@@ -24,8 +24,8 @@ This plugin will allow selecting and exporting the in-game build structures to D
 - Login to your Dash Platform username account and upload the structure as NFT
   - Setup a username in Dash Chrome Wallet and activate `Push Notifications`
   - In the Minecraft game type `t` to open chat
-  - Enter `/dash login <dash-username>` eg. `/dash login readme` -> wait for the Chrome Wallet Notification and confirm the request
-  - Enter `/dash save <name> <title>` eg. `/dash save myNFT My NFT Example` -> wait for the Chrome Wallet Notification and confirm the request
+  - Enter `/dash login <dash-username>` eg. `/dash login readme` -> wait for the Notification from Chrome Wallet and confirm the request
+  - Enter `/dash save <name> <title>` eg. `/dash save myNFT My NFT Example` -> wait for the Notification from Chrome Wallet and confirm the request
 - View your NFT on the [MineCraft-Explorer](http://readme.dashdevs.org/minecraft-explorer/)
 
 A detailed step-by-step instruction for connecting Dash Chrome Wallet with your Minecraft account on the Dashcraft server is documented below.
