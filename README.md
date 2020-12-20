@@ -124,10 +124,10 @@ Again you have to confirm a Dapp Request Notification inside Chrome Wallet. Afte
 
 ### Server
 - [Spigot](https://getbukkit.org/) / SpigotPaper Server 
-- [Worldedit](https://enginehub.org/worldedit/) **OR** [Fast Async Worldedit](https://wiki.intellectualsites.com/en/FastAsyncWorldEdit)
+- [Worldedit](https://enginehub.org/worldedit/) or [Fast Async Worldedit](https://wiki.intellectualsites.com/en/FastAsyncWorldEdit)
 
 ### Installation
-- Download .jar plugin and place into Spigot Server Plugin directory
+- Download [Plugin](https://github.com/readme55/Dashcraft/raw/main/target/DashCraft.jar) and place into Spigot Server `/plugins` directory
 - Add Permission creative.dash
 - Restart server
 
