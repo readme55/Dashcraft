@@ -123,8 +123,8 @@ Again you have to confirm a Dapp Request Notification inside Chrome Wallet. Afte
 ## Requirements for Developers and Server Owners
 
 ### Server
-- Spigot / SpigotPaper Server (https://getbukkit.org/)
-- Worldedit (https://enginehub.org/worldedit/) **OR** Fast Async Worldedit (https://wiki.intellectualsites.com/en/FastAsyncWorldEdit)
+- [Spigot](https://getbukkit.org/) / SpigotPaper Server 
+- [Worldedit](https://enginehub.org/worldedit/) **OR** [Fast Async Worldedit](https://wiki.intellectualsites.com/en/FastAsyncWorldEdit)
 
 ### Installation
 - Download .jar plugin and place into Spigot Server Plugin directory
