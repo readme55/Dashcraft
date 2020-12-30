@@ -2,20 +2,20 @@
 const Dash = require('dash');
 var fs = require('fs');
 
-const dappIdentityId = 'Be9CKRUEXJHro4uzmX8xdw4E5JqRMao1TSWDCDVfBdvP';
-const messageContractId = 'CfHbvNx8ZJfhoizqCDawZK53iqyuJXdqwzQ8eVh58bjE';
+const dappIdentityId = 'HK1jnhxWMDuoEwkvKXTXFR5WeTYzx4Vm9C7Yx9qPhWXC';
+const messageContractId = '3coTShwTvmKiySpwmDDzRJ9FGQx4RNLdawLttT9RNxXa';
 
 var myArgs = process.argv.slice(2);
 var filepath = myArgs[0];
 
 const clientOpts = {
-	network: 'evonet',
+	network: 'testnet',
     wallet: {
-        mnemonic: 'protect horror stove scrub foster brave air ski song bitter stomach siren',
+        mnemonic: 'era message genuine crystal margin cricket fabric address tank omit swing large',
     },
     apps: {
         messageContract: {
-            contractId: 'CfHbvNx8ZJfhoizqCDawZK53iqyuJXdqwzQ8eVh58bjE'
+            contractId: '3coTShwTvmKiySpwmDDzRJ9FGQx4RNLdawLttT9RNxXa'
         }
     }
 };

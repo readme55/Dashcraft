@@ -3,8 +3,8 @@ const { fail } = require('assert');
 const Dash = require('dash');
 let fs = require('fs');
 
-const dappIdentityId = 'Be9CKRUEXJHro4uzmX8xdw4E5JqRMao1TSWDCDVfBdvP';
-const messageContractId = 'CfHbvNx8ZJfhoizqCDawZK53iqyuJXdqwzQ8eVh58bjE';
+const dappIdentityId = 'HK1jnhxWMDuoEwkvKXTXFR5WeTYzx4Vm9C7Yx9qPhWXC';
+const messageContractId = '3coTShwTvmKiySpwmDDzRJ9FGQx4RNLdawLttT9RNxXa';
 
 let myArgs = process.argv.slice(2);
 let inputUsername = myArgs[0];
@@ -13,13 +13,13 @@ let loginAuth = false;
 
 
 const clientOpts = {
-    network: 'evonet',
+    network: 'testnet',
     wallet: {
-        mnemonic: 'protect horror stove scrub foster brave air ski song bitter stomach siren',
+        mnemonic: 'era message genuine crystal margin cricket fabric address tank omit swing large',
     },
     apps: {
         messageContract: {
-            contractId: 'CfHbvNx8ZJfhoizqCDawZK53iqyuJXdqwzQ8eVh58bjE'
+            contractId: '3coTShwTvmKiySpwmDDzRJ9FGQx4RNLdawLttT9RNxXa'
         }
     }
 };
