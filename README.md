@@ -1,4 +1,4 @@
-# Dashcraft
+# Dashcraft - Minecraft Server: 185.141.27.111
 
 Minecraft Server-Plugin for storing v1.13+ (Sponge) structures as Non-Fungible-Tokens (NFT) on [Dash Platform](https://dashplatform.readme.io/docs/introduction-what-is-dash-platform) Blockchain. A demonstration for the creation and storage of NFT's in Data-Contracts. Anyone can use the default Minecraft game installation and connect to the [Dashcraft Creative Server](https://github.com/readme55/dashcraft-server) **185.141.27.111** running this plugin. After the structure is build, chat commands can be used to submit the NFT to the blockchain using [Dash Chrome Wallet](https://github.com/readme55/Dash-Chrome-Wallet) and a Dash username account.
 This plugin will allow selecting and exporting the in-game build structures to Dash Platform and visualize them online on the [MineCraft-Explorer](http://readme.dashdevs.org/minecraft-explorer/)
